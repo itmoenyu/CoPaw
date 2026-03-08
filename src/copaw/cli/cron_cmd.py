@@ -20,7 +20,7 @@ def _base_url(ctx: click.Context, base_url: Optional[str]) -> str:
     if base_url:
         return base_url.rstrip("/")
     host = (ctx.obj or {}).get("host", "127.0.0.1")
-    port = (ctx.obj or {}).get("port", 8088)
+    port = (ctx.obj or {}).get("port", 9000)
     return f"http://{host}:{port}"
 
 
